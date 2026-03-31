@@ -1,84 +1,104 @@
 <div align="center">
-  <h1>🔋 EVConnect TN (ChargeBlock)</h1>
-  <p><strong>A Next-Generation EV Charging Locator and Booking Platform for Tamil Nadu</strong></p>
-
-  ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-  ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
-  ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
-  ![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)
+  # ChargeBlock: EVConnect TN
+  
+  **Scalable Electric Vehicle Infrastructure Management & Reservation Platform**
+  
+  <p>
+    <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-18.x-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" /></a>
+    <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-5.x-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E" alt="Vite" /></a>
+    <a href="https://leafletjs.com/"><img src="https://img.shields.io/badge/Leaflet-GeoSpatial-199900?style=for-the-badge&logo=leaflet&logoColor=white" alt="Leaflet" /></a>
+  </p>
 
   <p>
-    Seamlessly locate, monitor, and reserve electric vehicle charging slots across Tamil Nadu in real-time. Designed with a stunning, performance-driven UI.
+    An enterprise-grade frontend application designed to abstract the complexities of locating, analyzing, and reserving electric vehicle (EV) charging hardware across Tamil Nadu.
   </p>
 </div>
 
----
+<hr />
 
-## ✨ Key Features
+## 📋 Table of Contents
+1. [Project Overview](#-project-overview)
+2. [Core Capabilities](#-core-capabilities)
+3. [Architecture & Stack](#-architecture--stack)
+4. [Installation & Setup](#-installation--setup)
+5. [Directory Structure](#-directory-structure)
+6. [Roadmap](#-roadmap)
 
-- 🗺️ **Interactive Geographic Tracking:** An intuitive map interface powered by Leaflet, visualizing registered EV charging hubs with dynamic status markers.
-- ⚡ **Live Telemetry & Status:** Real-time visibility into the availability of individual hardware connectors (`Free`, `Charging`, `Offline`), showing output capacities like 22kW, 50kW, and 150kW.
-- 📅 **Advance Slot Booking:** Select, schedule, and block an available charger for a specific duration utilizing simulated pre-authorization systems.
-- 🤖 **AI Prediction Placeholder:** Demonstrating architecture for predicting charging wait times and peak usage hours using mock insight intelligence.
-- 🎨 **Premium Glassmorphism Aesthetic:** A cutting-edge dark mode interface built with pure CSS variables, complex gradients, and fluid micro-animations.
+## 🌐 Project Overview
 
-## 🛠️ Technology Stack
+As Tamil Nadu accelerates its adoption of electric vehicles, the infrastructure required to efficiently manage charging endpoints must scale accordingly. **ChargeBlock (EVConnect TN)** bridges the operational gap between EV owners and charge point operators (CPOs). It provides a unified, real-time geographical dashboard for monitoring hardware telematics and a deterministic slot-reservation system to mitigate range anxiety.
 
-* **Frontend Framework:** React 18, Vite
-* **Routing:** React Router v6
-* **Mapping Engine:** React-Leaflet (`leaflet`)
-* **Styling:** Custom CSS Design System
-* **Icons:** Lucide-React
+## ⚡ Core Capabilities
 
-## 🚀 Getting Started
+- **Real-Time Telematics Tracking:** Continuous monitoring of localized charging nodes (CCS2, Type 2, CHAdeMO) providing binary availability (`Available` vs. `Charging` vs. `Offline`) and live power delivery metrics (kW).
+- **Geospatial Intelligence:** High-performance, interactive mapping interface utilizing Leaflet.js to pinpoint infrastructure coordinates and facilitate granular, city-based filtering (e.g., Chennai, Coimbatore).
+- **Deterministic Booking Engine:** A comprehensive reservation pipeline allowing users to allocate specific time frames against distinct connector IDs, reducing queue congestion and hardware attrition.
+- **Predictive Analytics Interface:** UI scaffolding prepared for Machine Learning integration to forecast queue times and identify peak energy draw windows based on historical consumption telemetry.
+- **Premium User Experience:** Engineered with a robust, tokenized Design System supporting dynamic dark mode, glassmorphism compositing, and fluid micro-interactions.
 
-Follow these instructions to run the EVConnect TN prototype locally.
+## 🏗️ Architecture & Stack
+
+The application is built leveraging a modern, component-driven architecture:
+
+- **Core Library:** React 18 for reactive DOM manipulation.
+- **Build Tooling:** Vite for instantaneous Hot Module Replacement (HMR) and optimized production bundling.
+- **Routing Layer:** React Router DOM (v6) executing client-side navigational state mapping.
+- **Geospatial Mapping:** React-Leaflet abstracting the core Leaflet.js engine.
+- **Styling Paradigm:** Highly deliberate, utility-first Vanilla CSS implementing global scoping variables and advanced backdrop-filters.
+- **Iconography:** Lucide-React SVG library.
+
+## 🚀 Installation & Setup
 
 ### Prerequisites
-* [Node.js](https://nodejs.org/) (v16.x or newer recommended)
-* NPM or Yarn
+Ensure the following dependencies are present within your local execution environment:
+- Node.js (v18 Release Line or superior)
+- NPM or Yarn package manager
 
-### Installation
+### Environment Initialization
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/Jaiamar/ChargeBlock.git
    cd ChargeBlock
    ```
 
-2. Install dependencies:
+2. **Install project dependencies:**
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. **Initialize the local development server:**
    ```bash
    npm run dev
    ```
 
-4. Open your browser and navigate to `http://localhost:5173/`.
+4. **Access the application:**
+   Navigate to `http://localhost:5173` via your preferred web browser.
 
-## 📂 Project Structure
+## 📂 Directory Structure
 
 ```text
-src/
-├── components/          
-│   ├── Booking/         # Slot selection and reservation components
-│   ├── Map/             # React-Leaflet map and custom markers
-│   ├── Navigation/      # Global layout components like Navbar
-│   └── Station/         # Telemetry visualizers (Used/Free components)
-├── pages/               
-│   ├── Home.jsx         # Central map dashboard and filters
-│   ├── Booking.jsx      # Confirmation and payment simulation flow
-│   └── StationDetails.jsx # Granular analytics for a specific hub
-├── utils/               
-│   └── mockData.js      # Robust simulated dataset for Tamil Nadu
-├── index.css            # Core design system tokens and glassmorphism rules
-└── App.jsx              # Main routing container
+ChargeBlock/
+├── public/                 # Static topological assets
+├── src/
+│   ├── components/         # Reusable feature-specific UI segments
+│   │   ├── Booking/        # Transaction & time-slot selection interfaces
+│   │   ├── Map/            # Geospatial rendering components
+│   │   ├── Navigation/     # Application-wide routing wrappers
+│   │   └── Station/        # Telemetry parsing & visualization logic
+│   ├── pages/              # Top-level view controllers
+│   ├── utils/              # Development mock environments & helper functions
+│   ├── App.jsx             # Root application orchestrator
+│   ├── index.css           # Centralized tokenized styling foundation
+│   └── main.jsx            # DOM mounting and provider aggregation
+├── .gitignore
+├── package.json
+└── vite.config.js
 ```
 
-## 🔮 Future Enhancements (Phase 2)
-- [ ] Connect a PostgreSQL database to manage real operational telemetry.
-- [ ] Implement backend user authentication and JWT wallets.
-- [ ] Incorporate live payment gateways (Stripe/Razorpay) instead of pre-authorization mocks.
-- [ ] Train and integrate the actual Machine Learning model for the prediction engine.
+## 🔮 Roadmap (Phase II Implementation)
+
+- [ ] **Data Persistence:** Migrate abstract mocked states to a robust relational database schema (PostgreSQL) interfaced via Prisma or Sequelize.
+- [ ] **Authorization & Security:** Implement strict JWT-based user authentication and RBAC (Role-Based Access Control) for network operators.
+- [ ] **Payment Processing:** Finalize gateway integrations (Stripe) to transition from simulated pre-authorizations to finalized transaction captures.
+- [ ] **Fleet Analytics API:** Expose secure REST/GraphQL endpoints for third-party fleet tracking ingestion.
